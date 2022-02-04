@@ -265,25 +265,17 @@ address{
   .header ul{
     flex-flow: row nowrap;
   }
-  /* buttons use the 70% of the nav section space 1200px and the 70% is divided between the 4 buttons with 2% gap between ech button */
-  .header .button{
-    flex-basis: 15.5%;
-  }
   /* ordering the buttons and the logo element */
-  .header .order1{
+  .header li:nth-child(2),
+  .header li:nth-child(3){
     order: 1;
   }
-  .header .order2{
+  .header .header-logo{
     order: 2;
   }
-  .header .header-logo{
+  .header li:nth-child(4),
+  .header li:nth-child(5){
     order: 3;
-  }
-  .header .order4{
-    order: 4;
-  }
-  .header .order5{
-    order: 5;
   }
   /* styles for collections section desktop size */
   .collections ul li{
