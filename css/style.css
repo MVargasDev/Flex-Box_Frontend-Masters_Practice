@@ -46,6 +46,48 @@ section h2 {
 
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+/* Styles header and nav bar */
+header{
+  background-color: var(--color5);
+}
+.header ul{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+.header li{
+  margin-bottom: .5rem;
+  padding: 1rem;
+}
+/* logo responsive */
+.header .header-logo{
+  width: 100%;
+}
+.header img{
+  width: 100%;
+}
+/* flex property for buttons */
+.button{
+  background-color: var(--color10);
+  border-radius: .3rem;
+  flex-basis: 49%
+}
+.header a{
+  color: #fff;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%
+}
+
 /* Styles for Our Mission Part */
 .mission figure{
   margin: 0;
@@ -166,6 +208,20 @@ address{
 /* At this breakpoint, transition to 2 figures per line */
 
 @media (min-width: 550px) {
+  /* Styles for the header and Nav section tablet size*/
+  .header li{
+    padding: 0;
+  }
+  .header img{
+    width: auto;
+  }
+  .button{
+    background-color: var(--color5);
+    flex-basis: 9.75%;
+  }
+  .header a{
+    color: #000;
+  }
   /* Styles for mission section tablet size*/
   .mission{
     display: flex;
@@ -205,6 +261,30 @@ address{
 /* At this breakpoint, transition to 3 figures per line */
 
 @media (min-width: 800px) {
+  /* Styles for header and Nav section Desktop size */
+  .header ul{
+    flex-flow: row nowrap;
+  }
+  /* buttons use the 70% of the nav section space 1200px and the 70% is divided between the 4 buttons with 2% gap between ech button */
+  .header .button{
+    flex-basis: 15.5%;
+  }
+  /* ordering the buttons and the logo element */
+  .header .order1{
+    order: 1;
+  }
+  .header .order2{
+    order: 2;
+  }
+  .header .header-logo{
+    order: 3;
+  }
+  .header .order4{
+    order: 4;
+  }
+  .header .order5{
+    order: 5;
+  }
   /* styles for collections section desktop size */
   .collections ul li{
     flex-basis: 32.33%;
