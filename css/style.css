@@ -87,7 +87,19 @@ header{
   text-decoration: none;
   width: 100%
 }
-
+/* Styles for the hero section */
+.hero{
+  background-color: var(--color7);
+}
+.hero figure{
+  margin: 0;
+  padding: 0;
+}
+.hero img{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 /* Styles for Our Mission Part */
 .mission figure{
   margin: 0;
@@ -99,6 +111,92 @@ header{
 }
 .mission p{
   line-height: 1.7;
+}
+/* Styles for popular prints section*/
+.popular-prints{
+  background-color: var(--color2);
+  padding: 1rem;
+}
+.popular-prints h2{
+  color: white;
+}
+.popular-prints ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popular-prints li{
+  border: .5rem solid #000;
+  border-radius: .7rem;
+  margin-bottom: .5rem;
+}
+.popular-prints figure{
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  max-height: 25rem;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* images styles */
+.popular-prints img{
+  max-width: 100%;
+}
+
+.popular-prints figcaption{
+  background-color: #fff;
+  bottom: 0%;
+  font-size: 2rem;
+  opacity: 0.7;
+  padding: 1rem;
+  position: absolute;
+  width: 100%
+}
+.popular-prints a{
+  text-decoration: none;
+  color: #000;
+}
+
+.popular-prints .color1{
+  border-color: var(--color8);
+}
+.popular-prints .color2{
+  border-color: var(--color6);
+}
+.popular-prints .color3{
+  border-color: var(--color4);
+}
+/* Styles for the Featured section */
+.featured{
+  margin-top: 1rem;
+}
+.featured figure{
+  border: .5rem solid var(--color7);
+  border-radius: .7rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  max-height: 20rem;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.featured img{
+  max-width: 100%;
+}
+.featured figcaption{
+  background-color: #fff;
+  bottom: 0%;
+  font-size: 2rem;
+  opacity: 0.7;
+  padding: 1rem;
+  position: absolute;
+  width: 100%
 }
 /* Styles for the collections part */
 .collections ul{
@@ -228,10 +326,28 @@ address{
     flex-flow: row nowrap;
     gap: 4%;
   }
-
   .mission p{
     flex-basis: 64%;
     order: 2;
+  }
+  /* styles for popular prints tablet size */
+  .popular-prints ul{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+  }
+  .popular-prints li{
+    flex-basis: 49%;
+  }
+  .popular-prints li:nth-child(3){
+    flex-basis: 100%;
+  }
+  .popular-prints li:nth-child(3) img{
+    object-position: 0 -300px;
+  }
+  /* styles for the featured section tablet size */
+  .featured figure{
+    max-height: 40rem;
   }
   /* styles for collections section tablet size*/
   .collections ul{
@@ -277,6 +393,15 @@ address{
   .header li:nth-child(5){
     order: 3;
   }
+  /* syltes for the popupar prints section desktop size */
+  .popular-prints li,
+  .popular-prints li:nth-child(3){
+    flex-basis: 32%;
+  }
+  .popular-prints li:nth-child(3) img{
+    object-position: 0;
+  }
+
   /* styles for collections section desktop size */
   .collections ul li{
     flex-basis: 32.33%;
